@@ -1,0 +1,77 @@
+name: Record position
+
+# 手動回報成交：你在券商成交後，到 Actions 頁面按 Run workflow，填入資料。
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "open=登記新部位 / close=登記出場或修正出場價 / delete=刪除登記錯誤的部位"
+        type: choice
+        options: [open, close, delete]
+        required: true
+      symbol:
+        description: "標的"
+        type: choice
+        options: [BITX, ETHU, SPXL, SPXU, TQQQ, SQQQ, SOXL, SOXS, FAZ, FAS]
+        required: true
+      side:
+        description: "方向：long=買進(做多) / short=賣出(放空)。BITX、ETHU 兩種都有；其他只有 short"
+        type: choice
+        options: [long, short]
+        required: true
+      price:
+        description: "實際成交價（delete 不用填）"
+        type: string
+        required: false
+      date:
+        description: "成交日 YYYY-MM-DD（不填 = 紐約時間今天）"
+        type: string
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: signal-state
+  cancel-in-progress: false
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Record
+        env:
+          ACTION: ${{ inputs.action }}
+          SYMBOL: ${{ inputs.symbol }}
+          SIDE: ${{ inputs.side }}
+          PRICE: ${{ inputs.price }}
+          TRADE_DATE: ${{ inputs.date }}
+        run: |
+          args=("$ACTION" "$SYMBOL" "$SIDE")
+          if [ -n "$PRICE" ]; then args+=("$PRICE"); fi
+          if [ -n "$TRADE_DATE" ]; then args+=(--date "$TRADE_DATE"); fi
+          python -m signal_checker.record "${args[@]}"
+
+      - name: Save updated data
+        run: |
+          git config user.name "signal-bot"
+          git config user.email "signal-bot@users.noreply.github.com"
+          git add data docs
+          if git diff --cached --quiet; then
+            echo "沒有需要儲存的變更"
+          else
+            git commit -m "record position"
+            git pull --rebase
+            git push
+          fi

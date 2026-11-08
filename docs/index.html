@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>部位進出場訊號</title>
+<style>
+:root{--bg:#fff;--fg:#1a1a1a;--mut:#666;--line:#ddd;--sig:#fff3cd;--has:#e7f3ff;--warn:#ffe0e0;--err:#eee}
+@media(prefers-color-scheme:dark){:root{--bg:#16181c;--fg:#e8e8e8;--mut:#9aa;--line:#333;--sig:#4a3f10;--has:#17324d;--warn:#5a2020;--err:#2a2a2a}}
+body{margin:0;padding:16px;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,"Noto Sans TC",sans-serif}
+h1{font-size:20px;margin:0 0 4px} h2{font-size:16px;margin:28px 0 8px}
+.mut{color:var(--mut);font-size:13px}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:720px}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top;font-size:13px}
+th{background:var(--err)}
+tr.sig{background:var(--sig)} tr.has{background:var(--has)} tr.warn{background:var(--warn)} tr.err{background:var(--err)}
+</style></head><body>
+<h1>部位進出場訊號</h1>
+<div class="mut">尚未執行過檢查　｜　目前持有部位 0 個</div>
+<h2>目前狀態</h2>
+<div class="wrap"><table>
+<tr><th>標的/方向</th><th>狀態</th><th>進場日</th><th>進場價</th><th>目前價</th><th>出場價／今日進場價</th><th>進場後極端價</th><th>備註</th></tr>
+<tr class='err'><td><b>BITX</b><br><small>買進(做多)</small></td><td>資料錯誤</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>尚未執行過檢查</td></tr><tr class='err'><td><b>ETHU</b><br><small>買進(做多)</small></td><td>資料錯誤</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>尚未執行過檢查</td></tr><tr class='err'><td><b>SPXL</b><br><small>賣出(放空)</small></td><td>資料錯誤</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>尚未執行過檢查</td></tr><tr class='err'><td><b>SPXU</b><br><small>賣出(放空)</small></td><td>資料錯誤</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>尚未執行過檢查</td></tr><tr class='err'><td><b>TQQQ</b><br><small>賣出(放空)</small></td><td>資料錯誤</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>尚未執行過檢查</td></tr><tr class='err'><td><b>SQQQ</b><br><small>賣出(放空)</small></td><td>資料錯誤</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>尚未執行過檢查</td></tr><tr class='err'><td><b>SOXL</b><br><small>賣出(放空)</small></td><td>資料錯誤</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>尚未執行過檢查</td></tr><tr class='err'><td><b>SOXS</b><br><small>賣出(放空)</small></td><td>資料錯誤</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>尚未執行過檢查</td></tr><tr class='err'><td><b>FAZ</b><br><small>賣出(放空)</small></td><td>資料錯誤</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>尚未執行過檢查</td></tr><tr class='err'><td><b>FAS</b><br><small>賣出(放空)</small></td><td>資料錯誤</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>尚未執行過檢查</td></tr><tr class='err'><td><b>BITX</b><br><small>賣出(放空)</small></td><td>資料錯誤</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>尚未執行過檢查</td></tr><tr class='err'><td><b>ETHU</b><br><small>賣出(放空)</small></td><td>資料錯誤</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>尚未執行過檢查</td></tr>
+</table></div>
+<div class="mut">條件欄的三個符號依序為進場條件 1、2、3。黃色＝進場訊號；藍色＝有部位；紅色＝盤中已觸及出場價。</div>
+<h2>已出場紀錄（最近 30 筆）</h2>
+<div class="wrap"><table>
+<tr><th>標的/方向</th><th>進場日</th><th>進場價</th><th>出場日</th><th>出場價</th><th>損益</th><th>出場原因</th></tr>
+<tr><td colspan='7'>尚無已出場紀錄</td></tr>
+</table></div>
+<h2>目前使用的出場規則</h2>
+<div class="wrap"><table>
+<tr><th>標的</th><th>方向</th><th>停損</th><th>獲利達此值→保本</th><th>獲利達此值以上→移動出場</th><th>移動幅度</th></tr>
+<tr><td>BITX</td><td>買進(做多)</td><td>10%</td><td>5%</td><td>10%</td><td>25%（回撤）</td></tr><tr><td>ETHU</td><td>買進(做多)</td><td>20%</td><td>5%</td><td>15%</td><td>5%（回撤）</td></tr><tr><td>SPXL</td><td>賣出(放空)</td><td>5%</td><td>10%</td><td>15%</td><td>5%（回彈）</td></tr><tr><td>SPXU</td><td>賣出(放空)</td><td>5%</td><td>10%</td><td>10%</td><td>10%（回彈）</td></tr><tr><td>TQQQ</td><td>賣出(放空)</td><td>5%</td><td>5%</td><td>15%</td><td>15%（回彈）</td></tr><tr><td>SQQQ</td><td>賣出(放空)</td><td>5%</td><td>5%</td><td>25%</td><td>10%（回彈）</td></tr><tr><td>SOXL</td><td>賣出(放空)</td><td>5%</td><td>5%</td><td>10%</td><td>5%（回彈）</td></tr><tr><td>SOXS</td><td>賣出(放空)</td><td>5%</td><td>20%</td><td>25%</td><td>10%（回彈）</td></tr><tr><td>FAZ</td><td>賣出(放空)</td><td>15%</td><td>5%</td><td>15%</td><td>5%（回彈）</td></tr><tr><td>FAS</td><td>賣出(放空)</td><td>5%</td><td>15%</td><td>20%</td><td>5%（回彈）</td></tr><tr><td>BITX</td><td>賣出(放空)</td><td>5%</td><td>5%</td><td>15%</td><td>10%（回彈）</td></tr><tr><td>ETHU</td><td>賣出(放空)</td><td>5%</td><td>5%</td><td>20%</td><td>15%（回彈）</td></tr>
+</table></div>
+<p class="mut">本頁只提供訊號與價位，不是投資建議。高槓桿 ETF 風險很高，過去績效不代表未來。</p>
+</body></html>
