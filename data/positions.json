@@ -1,4 +1,11 @@
 {
-  "open": {},
+  "open": {
+    "SQQQ:short": {
+      "symbol": "SQQQ",
+      "side": "short",
+      "entry_date": "2026-11-09",
+      "entry_price": 45.75
+    }
+  },
   "closed": []
 }
