@@ -5,6 +5,12 @@
       "side": "short",
       "entry_date": "2026-11-09",
       "entry_price": 45.75
+    },
+    "SOXS:short": {
+      "symbol": "SOXS",
+      "side": "short",
+      "entry_date": "2026-11-09",
+      "entry_price": 64.15
     }
   },
   "closed": []
