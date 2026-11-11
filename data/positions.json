@@ -11,6 +11,12 @@
       "side": "short",
       "entry_date": "2026-11-09",
       "entry_price": 64.15
+    },
+    "ETHU:long": {
+      "symbol": "ETHU",
+      "side": "long",
+      "entry_date": "2026-11-11",
+      "entry_price": 17.68
     }
   },
   "closed": []
