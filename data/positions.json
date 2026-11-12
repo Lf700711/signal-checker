@@ -6,12 +6,6 @@
       "entry_date": "2026-11-09",
       "entry_price": 45.75
     },
-    "SOXS:short": {
-      "symbol": "SOXS",
-      "side": "short",
-      "entry_date": "2026-11-09",
-      "entry_price": 64.15
-    },
     "ETHU:long": {
       "symbol": "ETHU",
       "side": "long",
@@ -19,5 +13,17 @@
       "entry_price": 17.68
     }
   },
-  "closed": []
+  "closed": [
+    {
+      "symbol": "SOXS",
+      "side": "short",
+      "entry_date": "2026-11-09",
+      "entry_price": 64.15,
+      "exit_date": "2026-11-12",
+      "exit_price": 45.9,
+      "pnl_pct": 28.45,
+      "exit_reason": "手動回報",
+      "auto": false
+    }
+  ]
 }
