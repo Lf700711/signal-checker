@@ -11,6 +11,12 @@
       "side": "long",
       "entry_date": "2026-11-11",
       "entry_price": 17.68
+    },
+    "SOXL:short": {
+      "symbol": "SOXL",
+      "side": "short",
+      "entry_date": "2026-11-13",
+      "entry_price": 59.27
     }
   },
   "closed": [
