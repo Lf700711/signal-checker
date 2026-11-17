@@ -1,12 +1,5 @@
 {
-  "open": {
-    "SOXL:short": {
-      "symbol": "SOXL",
-      "side": "short",
-      "entry_date": "2026-11-13",
-      "entry_price": 59.27
-    }
-  },
+  "open": {},
   "closed": [
     {
       "symbol": "SOXS",
@@ -38,6 +31,17 @@
       "exit_date": "2026-11-16",
       "exit_price": 45.75,
       "pnl_pct": 0.0,
+      "exit_reason": "手動回報",
+      "auto": false
+    },
+    {
+      "symbol": "SOXL",
+      "side": "short",
+      "entry_date": "2026-11-13",
+      "entry_price": 59.27,
+      "exit_date": "2026-11-13",
+      "exit_price": 54.98,
+      "pnl_pct": 7.24,
       "exit_reason": "手動回報",
       "auto": false
     }
