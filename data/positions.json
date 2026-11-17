@@ -6,12 +6,6 @@
       "entry_date": "2026-11-09",
       "entry_price": 45.75
     },
-    "ETHU:long": {
-      "symbol": "ETHU",
-      "side": "long",
-      "entry_date": "2026-11-11",
-      "entry_price": 17.68
-    },
     "SOXL:short": {
       "symbol": "SOXL",
       "side": "short",
@@ -28,6 +22,17 @@
       "exit_date": "2026-11-12",
       "exit_price": 45.9,
       "pnl_pct": 28.45,
+      "exit_reason": "手動回報",
+      "auto": false
+    },
+    {
+      "symbol": "ETHU",
+      "side": "long",
+      "entry_date": "2026-11-11",
+      "entry_price": 17.68,
+      "exit_date": "2026-11-16",
+      "exit_price": 13.32,
+      "pnl_pct": -24.66,
       "exit_reason": "手動回報",
       "auto": false
     }
