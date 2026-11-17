@@ -33,7 +33,7 @@
       "exit_date": "2026-11-16",
       "exit_price": 13.32,
       "pnl_pct": -24.66,
-      "exit_reason": "手動回報",
+      "exit_reason": "手動修正",
       "auto": false
     }
   ]
