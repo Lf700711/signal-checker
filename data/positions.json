@@ -1,11 +1,5 @@
 {
   "open": {
-    "SQQQ:short": {
-      "symbol": "SQQQ",
-      "side": "short",
-      "entry_date": "2026-11-09",
-      "entry_price": 45.75
-    },
     "SOXL:short": {
       "symbol": "SOXL",
       "side": "short",
@@ -34,6 +28,17 @@
       "exit_price": 13.32,
       "pnl_pct": -24.66,
       "exit_reason": "手動修正",
+      "auto": false
+    },
+    {
+      "symbol": "SQQQ",
+      "side": "short",
+      "entry_date": "2026-11-09",
+      "entry_price": 45.75,
+      "exit_date": "2026-11-16",
+      "exit_price": 45.75,
+      "pnl_pct": 0.0,
+      "exit_reason": "手動回報",
       "auto": false
     }
   ]
